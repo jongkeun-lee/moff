@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>M:OFF</title>
+  <link rel="stylesheet" href="../assets/css/app.css">
+</head>
+
+<body>
+  <div class="wrap">
+    <header>
+      <section class="hd1Wrap">
+        <div class="left">
+          <button type="button" class="btnGnb">명함관리</button>
+        </div>
+        <div class="right">
+          <nav class="tnb">
+            <ul>
+              <li><a href="./myinfo.html" class="myinfo">내정보</a></li>
+              <li><a href="./notice.html" class="notice">알림</a></li>
+              <li><a href="./setting.html" class="setting">설정</a></li>
+            </ul>
+          </nav>
+        </div>
+      </section>
+      <nav class="gnb">
+        <ul>
+          <li><a href="./commute.html">출/퇴근</a></li>
+          <li><a href="./calendar.html">회사일정</a></li>
+          <li><a href="./outside.html">외근관리</a></li>
+          <li><a href="./approval.html">전자결재</a></li>
+          <li><a href="./vacation.html">휴가신청</a></li>
+          <li><a href="./bscard.html" class="on">명함관리</a></li>
+          <li><a href="./notice.html">공지사항</a></li>
+          <li><a href="./gallery.html">갤러리</a></li>
+          <li><a href="./document.html">증빙서류</a></li>
+          <li><a href="./education.html">사내교육</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main class="container">
+      <div class="bgW">
+        <section class="titWrap">
+          <div class="checkWrap">
+            <ul>
+              <li>
+                <label><input type="checkbox" name="cate" checked><b>우리 회사</b></label>
+              </li>
+              <li>
+                <label><input type="checkbox" name="cate"><b>내 명함</b></label>
+              </li>
+              <li>
+                <label><input type="checkbox" name="cate"><b>공유 명함</b></label>
+              </li>
+            </ul>
+          </div>
+          <button type="button" class="btnSort sort1">등록순</button> <!--등록순, 이름순, 회사순-->
+        </section>
+        <section class="searchWrap">
+          <input type="search" placeholder="이름, 회사명, 휴대전화, 이메일 검색">
+          <button type="button">검색</button>
+        </section>
+        <section class="bslistWrap">
+          <ul>
+            <li>
+              <div class="thumb gr">
+                <i><img src="../assets/images/temp_profile2.jpg" alt=""></i>
+              </div>
+              <div class="txtArea"> <!-- [D] 검색된 단어는 em태그로 감싸기 -->
+                <p class="name">김<em>정호</em></p>
+                <p class="group">실장 / 전략기획실 / <b class="company">씽크트리</b></p>
+                <p class="tel">010-1234-5678 <a href="tel:010-1234-5678" class="btnTel"></a></p>
+                <p class="email">sh123@think-tree.com <a href="mailto:sh123@thinktree.com" class="btnEmail"></a></p>
+              </div>
+            </li>
+            <li>
+              <div class="thumb pu">
+                <i><img src="../assets/images/temp_profile1.jpg" alt=""></i>
+              </div>
+              <div class="txtArea">
+                <p class="name">이종근</p>
+                <p class="group">팀장 / 프론트엔드개발팀 / <b class="company">씽크트리</b></p>
+                <p class="tel">010-1234-5678 <a href="tel:010-1234-5678" class="btnTel"></a></p>
+              </div>
+            </li>
+            <li>
+              <div class="thumb">
+                <i>선</i>
+              </div>
+              <div class="txtArea">
+                <p class="name">선하민</p>
+                <p class="group"><b class="company">팔도대첩</b></p>
+                <p class="email">jk123@naver.com <a href="mailto:jk123@naver.com" class="btnEmail"></a></p>
+              </div>
+            </li>
+            <li>
+              <div class="thumb">
+                <i>이</i>
+              </div>
+              <div class="txtArea">
+                <p class="name">이정재</p><p class="group">사원 / 전략기획실 / <b class="company">쩜사쩜오</b></p>
+              </div>
+            </li>
+          </ul>
+          <div class="noData">
+            검색 결과 없음
+          </div>
+        </section>
+      </div>
+      <aside>
+        <button type="button" class="btnTop">TOP</button>
+      </aside>
+    </main>
+    <footer>
+      <nav class="fnb">
+        <ul>
+          <li>
+            <a href="./approval.html" class="apprival">전자결재</a>
+          </li>
+          <li>
+            <a href="./vacation.html" class="vacation">휴가신청</a>
+          </li>
+          <li>
+            <a href="./commute.html" class="commute">출퇴근</a>
+          </li>
+          <li>
+            <a href="./bscard.html" class="bscard on">명함관리</a>
+          </li>
+          <li>
+            <a href="./calendar.html" class="calendar">회사일정</a>
+          </li>
+        </ul>
+      </nav>
+    </footer>
+  </div>
+  <script src="../assets/js/common.js"></script>
+</body>
+
+</html>

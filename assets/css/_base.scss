@@ -1,0 +1,202 @@
+html {
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  font-size: 10px;
+}
+
+body {
+  margin: 0;
+  font-size: 1.4rem; font-weight: 400; color: #333;
+  font-family: "Pretendard", -apple-system,BlinkMacSystemFont,system-ui,Roboto,"Helvetica Neue","Segoe UI","Apple SD Gothic Neo","Noto Sans KR","Malgun Gothic",sans-serif;;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+section,
+summary,
+address {
+  display: block;
+  box-sizing: border-box;
+}
+
+address {
+  font-style: 300;
+}
+
+a {
+  color: inherit;
+  background-color: transparent;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+a:active,
+a:hover {
+  outline: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+img {
+  border: 0;
+  max-width: 100%;
+  // max-height: 100%;
+  vertical-align: top;
+  box-sizing: border-box;
+}
+
+hr {
+  height: 0;
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  margin: 0;
+  font-size: inherit;
+  color: inherit;
+  font-family: inherit;
+  box-sizing: border-box;
+}
+
+button {
+  overflow: visible;
+  background: none;
+  border: none;
+  padding: 0;
+}
+
+button,
+select {
+  text-transform: none;
+}
+
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button;
+  cursor: pointer;
+}
+
+button[disabled],
+html input[disabled] {
+  cursor: default;
+}
+
+// button:focus,
+// a:focus {
+//   outline: $color1 dotted thin;
+// }
+
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+input {
+  line-height: normal;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+input[type="search"] {
+  box-sizing: border-box;
+}
+
+fieldset {
+  padding: 0.35em 0.625em 0.75em;
+  margin: 0 2px;
+  border: 1px solid #c0c0c0;
+}
+
+legend {
+  padding: 0;
+  border: 0;
+}
+
+textarea {
+  overflow: auto;
+}
+
+table {
+  border-spacing: 0;
+  border-collapse: collapse;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+td,
+th {
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul,
+ol {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  box-sizing: border-box;
+}
+li {
+  box-sizing: border-box;
+}
+
+dl,
+dt,
+dd {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+p {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+i,
+em,
+b,
+u {
+  font-style: inherit;
+  font-weight: inherit;
+  box-sizing: border-box;
+}
+
+canvas {
+  margin: 0;
+  padding: 0;
+}

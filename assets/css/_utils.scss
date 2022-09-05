@@ -1,0 +1,203 @@
+
+// font
+@font-face {
+	font-family: 'Pretendard';
+	font-weight: 800;
+	font-display: swap;
+	src: local('Pretendard ExtraBold'), url('../font/Pretendard-ExtraBold.subset.woff2') format('woff2'), url('../font/Pretendard-ExtraBold.subset.woff') format('woff');
+}
+
+@font-face {
+	font-family: 'Pretendard';
+	font-weight: 700;
+	font-display: swap;
+	src: local('Pretendard Bold'), url('../font/Pretendard-Bold.subset.woff2') format('woff2'), url('../font/Pretendard-Bold.subset.woff') format('woff');
+}
+
+@font-face {
+	font-family: 'Pretendard';
+	font-weight: 600;
+	font-display: swap;
+	src: local('Pretendard SemiBold'), url('../font/Pretendard-SemiBold.subset.woff2') format('woff2'), url('../font/Pretendard-SemiBold.subset.woff') format('woff');
+}
+
+@font-face {
+	font-family: 'Pretendard';
+	font-weight: 500;
+	font-display: swap;
+	src: local('Pretendard Medium'), url('../font/Pretendard-Medium.subset.woff2') format('woff2'), url('../font/Pretendard-Medium.subset.woff') format('woff');
+}
+
+@font-face {
+	font-family: 'Pretendard';
+	font-weight: 400;
+	font-display: swap;
+	src: local('Pretendard Regular'), url('../font/Pretendard-Regular.subset.woff2') format('woff2'), url('../font/Pretendard-Regular.subset.woff') format('woff');
+}
+
+@font-face {
+	font-family: 'Pretendard';
+	font-weight: 300;
+	font-display: swap;
+	src: local('Pretendard Light'), url('../font/Pretendard-Light.subset.woff2') format('woff2'), url('../font/Pretendard-Light.subset.woff') format('woff');
+}
+
+@font-face {
+	font-family: 'Pretendard';
+	font-weight: 200;
+	font-display: swap;
+	src: local('Pretendard ExtraLight'), url('../font/Pretendard-ExtraLight.subset.woff2') format('woff2'), url('../font/Pretendard-ExtraLight.subset.woff') format('woff');
+}
+
+@font-face {
+	font-family: 'Pretendard';
+	font-weight: 100;
+	font-display: swap;
+	src: local('Pretendard Thin'), url('../font/Pretendard-Thin.subset.woff2') format('woff2'), url('../font/Pretendard-Thin.subset.woff') format('woff');
+}
+
+// var
+$colorP1: #5a9cff;
+$colorP2: #e7f0fe;
+$colorP3: #f7fafe;
+$colorS1: #f4b0e3;
+$colorT1: #244478;
+// mixin
+
+// media query
+$break-small: 320px;
+$break-medium: 768px;
+$break-large: 1280px;
+@mixin respond-to($media) {
+  @if $media== "small" {
+    @media only screen and (max-width: $break-small) {
+      @content;
+    }
+  } @else if $media== "medium" {
+    @media only screen and (max-width: $break-medium) {
+      @content;
+    }
+  } @else if $media== "small-medium" {
+    @media (min-width: #{$break-small}) and (max-width: #{$break-medium - 1px}) {
+      @content;
+    }
+  } @else if $media== "medium-large" {
+    @media (min-width: #{$break-medium}) and (max-width: #{$break-large - 1px}) {
+      @content;
+    }
+  } @else if $media== "large" {
+    @media (max-width: #{$break-large - 1px}) {
+      @content;
+    }
+  } @else if $media== "large-over" {
+    @media only screen and (min-width: $break-large) {
+      @content;
+    }
+  }
+}
+
+@mixin inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 18px;
+}
+
+@mixin flexWrap($d: row, $j: space-between, $a: center, $w: wrap, $g: 0) {
+  display: flex;
+  flex-direction: $d; // row column
+  justify-content: $j; // space-around space-evenly space-between center flex-start flex-end stretch
+  align-items: $a; // center flex-start flex-end
+  flex-wrap: $w;
+  gap: $g;
+}
+
+// @mixin colList($c: 2, $g: 20px) {
+//   display: flex;
+//   flex-direction: row;
+//   justify-content: flex-start;
+//   align-items: stretch;
+//   flex-wrap: wrap;
+//   gap: $g;
+//   &>* {
+//     width: calc( ( 100% - (#{$g}*(#{$c} - 1)) ) / #{$c} );
+//   }
+// }
+
+@mixin colArea($c: 2, $g: 10px) {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: stretch;
+  flex-wrap: wrap;
+  gap: $g;
+  &>* {
+    width: calc( ( 100% - (#{$g}*(#{$c} - 1)) ) / #{$c} );
+  }
+}
+
+// @for $i from 1 to 6 {
+//   .col#{$i}Area {
+//     @include flexWrap($j: space-between, $a: stretch);
+//     &>* {
+//       width: calc( ( 100% - (20px*(#{$i} - 1)) ) / #{$i} );
+//     }
+//   }
+// }
+
+@mixin dgWrap($c: 3, $g: 10px) {
+  display: grid;
+  grid-template-columns: repeat($c, 1fr);
+  gap: $g;
+}
+
+@mixin paArea($t: 0, $l: 0, $r: auto, $b: auto, $x: 0, $y: 0) {
+  position: absolute;
+  top: $t;
+  left: $l;
+  right: $r;
+  bottom: $b;
+  transform: translateX($x) translateY($y);
+}
+
+@mixin bgStyle($r: no-repeat, $x: center, $y: center, $s: cover) {
+  background-repeat: $r;
+  background-position-x: $x;
+  background-position-y: $y;
+  background-size: $s; // contain cover
+}
+
+@mixin inSpace($s:0, $d: top) {
+  margin-#{$d}: $s;
+  // @include respond-to(medium) {
+  //   margin-#{$d}: $s * 0.5;
+  // }
+}
+
+@mixin biBox {
+  @include flexWrap($g:10px);
+  border: $colorG2 solid 1px;
+  border-radius: 20px;
+  padding: 20px 20px;
+  min-height: 100px;
+  .txt {
+    flex-grow: 1;
+    @include flexWrap($d: column, $a: flex-start, $g: 10px,);
+  }
+  .tit {
+    font-size: 1.6rem;  font-weight: bold;
+    color: $colorP1;
+  }
+  .exp {
+    font-size: 1.4rem;
+    color: $colorG1;
+  }
+}
+
+// 임시
+// nav a,
+// nav button {
+//   @include flexWrap($j: center,);
+//   // height: 50px;
+//   min-width: 50px;
+//   padding: 2px 10px;
+// }

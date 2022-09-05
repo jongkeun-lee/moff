@@ -1,0 +1,528 @@
+// common template
+header {
+  .hd1Wrap {
+    @include flexWrap;
+    @include inner;
+    height: 50px;
+    border-bottom: #ddd solid 1px;
+    .btnGnb {
+      height: 40px;
+      padding-right: 25px;
+      color: #244478; font-size: 1.9rem; font-weight: 700;
+      position: relative;
+      &::after {
+        content: "";
+        display: block;
+        @include paArea($t: 15px, $l: auto, $r: 0,);
+        width: 6px; height: 6px;
+        border-right: 2px solid #999;
+        border-bottom: 2px solid #999;
+        transform: rotate(45deg);
+        transition: all 0.3s ease-out;
+      }
+      &.on {
+        &::after {
+          transform: rotate(-135deg);
+        }
+      }
+    }
+    .tnb ul {
+      @include flexWrap($g: 1 0px);
+      @include flexWrap($g: 10px, $j: flex-start);
+      li a {
+        @include flexWrap;
+        height: 40px; width: 40px;
+        @include bgStyle($s: 26px,);
+        font-size: 0;
+        &.myinfo {
+          background-image: url(../images/ico_tnb01.png);
+        }
+        &.notice {
+          background-image: url(../images/ico_tnb02.png);
+        }
+        &.setting {
+          background-image: url(../images/ico_tnb03.png);
+        }
+      }
+    }
+  }
+  .gnb {
+    height: 0;
+    overflow: hidden;
+    background-color: $colorP1;
+    transition: all 0.3s ease-out;
+    ul {
+      @include flexWrap($g: 20px, $w: nowrap,);
+      @include inner;
+      height: 100%;
+      overflow-x: auto;
+      li a {
+        @include flexWrap;
+        height: 40px;
+        white-space: nowrap;
+        color: #fff;
+        &.on {
+          font-weight: 700;
+        }
+      }
+    }
+    &.on {
+      height: 50px;
+    }
+  }
+}
+
+main {
+
+  padding-bottom: 35px;
+  position: relative;
+  min-height: calc(100vh - 140px);
+  .bgW {
+    padding: 25px 18px;
+    background-color: #fff;
+  }
+  .bgB {
+    padding: 25px 18px;
+    background-color: $colorP3;
+  }
+
+  .tabWrap {
+    & > ul {
+      @include flexWrap($g: 10px, $j: flex-start);
+      &>li a {
+        height: 30px; min-width: 70px;
+        @include flexWrap($j: center);
+        background-color: #fff;
+        border: #aaa solid 1px;
+        border-radius: 5px;
+        color: #aaa; font-weight: 600;
+        &.on {
+          border-color: $colorP1;
+          color: $colorP1;
+        }
+      }
+    }
+  }
+  .scrolltabWrap {
+    margin-right: -18px;
+    & > ul {
+      @include flexWrap($g: 5px, $j: flex-start, $w: nowrap,);
+      overflow-x: auto;
+      &>li a {
+        height: 30px; min-width: 100px;
+        @include flexWrap($j: center);
+        background-color: #fff;
+        border-bottom: #fff solid 2px;
+        color: #aaa; font-weight: 600;
+        &.on {
+          border-color: $colorP1;
+          color: $colorP1;
+        }
+      }
+    }
+  }
+  .tabCont {
+    display: none;
+    &.on {
+      display: block;
+    }
+    .bgB, .bgW {
+      padding-top: 0;
+    }
+  }
+  .titWrap {
+    @include flexWrap;
+  }
+  .period {
+    color: #6797e6; font-weight: 600; font-size: 1.3rem;
+  }
+  .checkWrap > ul {
+    border: #7b92d9 solid 1px;
+    border-radius: 5px;
+    @include flexWrap($g: 2px,);
+    padding: 2px 2px;
+    label {
+      @include flexWrap;
+      height: 35px; min-width: 65px;
+      position: relative;
+      input[type='checkbox'] {
+        position: absolute;
+        left: 0; top: 0;
+        width: 1px; height: 1px;
+        opacity: 0;
+      }
+      b {
+        @include flexWrap($j: center);
+        position: absolute;
+        left: 0; top: 0;
+        width: 100%; height: 100%;
+        background-color: #fff;
+        border-radius: 5px;
+        color: #7b92d9; font-weight: 600; font-size: 1.5rem;
+      }
+      input[type='checkbox']:checked + b {
+        background-color: #7b92d9;
+        color: #fff;
+      }
+    }
+  }
+  .searchWrap {
+    @include inSpace($s:15px,);
+    @include flexWrap;
+    height: 44px;
+    background-color: #f8f8f9;
+    border: #ddd solid 1px;
+    border-radius: 44px;
+    color: #aaa;
+    input[type='search'] {
+      flex: 1;
+      background-color: transparent;
+      border-color: transparent;
+      height: 100%;
+      border-radius: 44px 0 0 44px;
+      padding-left: 20px;
+    }
+    button {
+      width: 50px; height: 40px;
+      border-radius: 40px;
+      @include bgStyle($s: 20px,);
+      background-image: url(../images/ico_search.png);
+      font-size: 0;
+    }
+  }
+
+  .graphWrap {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: #ddd 0 5px 5px 0px;
+    padding: 15px 20px;
+    position: relative;
+
+    .graphArea {
+      text-align: center;
+    }
+    .graphTxt {
+      @include paArea($l: 50%, $t: 50%, $x: -50%, $y: -50%,);
+      text-align: center;
+      .date {
+        @include inSpace($s:20px,);
+        color: #687497; font-size: 1.3rem;
+      }
+      .time {
+        @include inSpace($s:10px,);
+        color: #244478; font-size: 3.5rem; font-weight: 600;
+      }
+      .msg {
+        @include inSpace($s:15px,);
+        color: #687497; font-size: 1.3rem; font-weight: 600;
+        strong {
+          color: $colorS1;
+        }
+      }
+    }
+  }
+  .infoWrap {
+    @include inSpace($s:25px,);
+    background-color: $colorP2;
+    border-radius: 10px;
+    padding: 30px 20px;
+    .titArea {
+      @include flexWrap;
+      font-size: 1.5rem;
+      .state {
+        padding-left: 20px;
+        font-weight: 500; color: #002968;
+        position: relative;
+        &::before {
+          content: '';
+          @include paArea($t:50%, $y:-50%);
+          width: 10px; height: 10px;
+          border-radius: 10px;
+          background-color: $colorP1;
+        }
+        &.ing::before,
+        &.remain::before {
+          background-color: $colorP1;
+        }
+        &.end::before,
+        &.used::before {
+          background-color: $colorS1;
+        }
+      }
+      .time {
+        font-weight: 600;
+      }
+      & + .titArea {
+        margin-top: 10px;
+      }
+    }
+    .col3Area>ul {
+      @include inSpace($s:20px,);
+      @include colArea($c: 3);
+      &>li {
+        background-color: #fff;
+        border-radius: 10px;
+        padding: 15px 0;
+        @include flexWrap($j: center, $d: column, $g: 10px,);
+        font-size: 1.5rem;
+        .tit {
+          color: #002968; font-weight: 500;
+        }
+        .exp {
+          font-weight: 600;
+        }
+      }
+    }
+  }
+  .tblWrap {
+    margin: 0 -18px;
+    background-color: #fff;
+    table {
+      border-top: #6797e6 solid 2px;
+    }
+    th, td {
+      padding: 16px 0;
+      text-align: center;
+    }
+    th {
+      color: #244478; font-weight: 500;
+      background-color: #f9f9f9;
+    }
+    td {
+      border-top: #ddd solid 1px;
+      strong {
+        color: $colorP1;
+      }
+      .ing {
+        color: #2dc194;
+      }
+      .end {
+        color: #999;
+      }
+      .use {
+        color: #5a9cff;
+      }
+    }
+  }
+  .bslistWrap {
+    margin: 0 -18px;
+    @include inSpace($s:15px,);
+
+    &>ul>li {
+      padding: 30px 18px;
+      @include flexWrap($g: 15px);
+      &:not(:first-of-type) {
+        border-top: #ddd solid 1px;
+      }
+
+      .thumb {
+        width: 110px; height: 110px;
+        flex-shrink: 0;
+
+        background-color: #dde5f3;
+        border: #dde5f3 solid 3px;
+        border-radius: 50%;
+
+        font-size: 4.0rem; font-weight: 500; color: #244478;
+        i {
+          @include flexWrap($j: center,);
+          width: 100%; height: 100%;
+          border: #fff solid 3px;
+          border-radius: 50%;
+          overflow: hidden;
+        }
+        img {
+          // max-width: 100%; max-height: 100%;
+          height: 100%; max-width: none;
+          margin: auto;
+          display: block;
+        }
+        &.gr {
+          border-color: green;
+        }
+        &.pu {
+          border-color: purple;
+        }
+        &.bl {
+          border-color: blue;
+        }
+        &.re {
+          border-color: red;
+        }
+        &.or {
+          border-color: orange;
+        }
+        &.ye {
+          border-color: yellow;
+        }
+        &.in {
+          border-color: indigo;
+        }
+      }
+      .txtArea {
+        flex: 1;
+        em {
+          color: #5a9cff;
+        }
+        .name {
+          color: #222; font-size: 2.2rem; font-weight: 700;
+        }
+        .group {
+          @include inSpace($s: 5px);
+          color: #666; font-size: 1.3rem; font-weight: 500;
+        }
+        .company {
+          color: #637cc9;
+        }
+        .tel {
+          @include inSpace($s: 15px);
+          @include flexWrap($j: flex-start, $g: 10px);
+          color: #002968; font-size: 1.7rem;
+          .btnTel {
+            display: block;
+            width: 25px; height: 25px;
+            background-color: #6797e6;
+            border-radius: 50%;
+            @include bgStyle($s:50%,);
+            background-image: url(../images/ico_phone.png);
+          }
+        }
+        .email {
+          @include inSpace($s: 15px);
+          @include flexWrap($j: flex-start, $g: 10px);
+          color: #002968; font-size: 1.7rem;
+          .btnEmail {
+            display: block;
+            width: 25px; height: 25px;
+            background-color: #6797e6;
+            border-radius: 50%;
+            @include bgStyle($s:50%,);
+            background-image: url(../images/ico_email.png);
+          }
+        }
+        .tel + .email {
+          @include inSpace($s: 5px);
+        }
+      }
+    }
+  }
+
+  .btnWrap {
+    @include paArea($t: auto, $b: 35px,);
+    @include flexWrap($j: center,);
+    width: 100%;
+  }
+
+  aside {
+    position: fixed;
+    right: 18px; bottom: 125px;
+  }
+  // btn
+  .btnPrimary {
+    @include flexWrap($j: center,);
+    width: 60%; height: 45px;
+    max-width: 235px;
+    border-radius: 45px;
+    background: linear-gradient(90deg, $colorP1 0%, $colorS1 100%);
+    color: #fff; font-weight: 600; font-size: 1.6rem;
+    &.reverse {
+      background: linear-gradient(90deg, $colorS1 0%, $colorP1 100%);;
+    }
+  }
+  .btnTop {
+    width: 45px; height: 45px;
+    background-color: #fff;
+    border: #aaa solid 1px;
+    border-radius: 50%;
+    font-size: 0;
+    &::after {
+      content: "";
+      display: block;
+      @include paArea($t: 50%, $l: 50%,);
+      width: 6px; height: 6px;
+      border-right: 2px solid #999;
+      border-bottom: 2px solid #999;
+      transform: translate(-50%, -50%) rotate(-135deg);
+      transition: all 0.3s ease-out;
+    }
+  }
+  .btnSort {
+    @include flexWrap;
+    height: 40px;
+    padding-right: 35px;
+    @include bgStyle($s: 25px, $x: 100%,);
+    background-image: url(../images/ico_filter.png);
+    color: #333; font-size: 1.3rem;
+  }
+  .btnSmall {
+    @include flexWrap($j: center,);
+    min-width: 70px; height: 30px;
+    font-size: 1.3rem; font-weight: 600;
+    border-radius: 5px;
+    &.t1 {
+      background-color: #5a9cff;
+      color: #fff;
+    }
+    &.t2 {
+      background-color: #fff;
+      border: #f5563c solid 1px;
+      color: #f5563c;
+    }
+  }
+
+  // nodata
+  .noData {
+    @include flexWrap($d: column, $g: 10px, $j: center,);
+    min-height: 50vh;
+    color: #959bad; font-size: 1.6rem; font-weight: 600;
+    &::before {
+      content:'!';
+      display: block;
+      border: #959bad solid 2px;
+      border-radius: 50%;
+      width: 20px; height: 20px;
+      text-align: center; line-height: 20px;
+    }
+  }
+}
+
+footer {
+  border-top: #ddd solid 1px;
+  padding: 15px 0;
+  .fnb {
+    &>ul {
+      @include flexWrap;
+      @include inner;
+      &>li a {
+        @include flexWrap;
+        height: 50px; width: 50px;
+        font-size: 1.4rem; color: #222; font-weight: 500;
+        padding-top: 35px;
+        @include bgStyle($s: 90%, $y: 0,);
+        opacity: 0.6;
+        filter: grayscale(100%);
+
+        &.apprival {
+          background-image: url(../images/ico_fnb01.png);
+        }
+        &.vacation {
+          background-image: url(../images/ico_fnb02.png);
+        }
+        &.commute {
+          background-image: url(../images/ico_fnb03.png);
+        }
+        &.bscard {
+          background-image: url(../images/ico_fnb04.png);
+        }
+        &.calendar {
+          background-image: url(../images/ico_fnb05.png);
+        }
+        &.on {
+          opacity: 1.0;
+          filter: grayscale(0);
+        }
+      }
+    }
+  }
+}
+

@@ -1,0 +1,343 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>M:OFF</title>
+  <link rel="stylesheet" href="../assets/css/app.css">
+</head>
+
+<body>
+  <div class="wrap">
+    <header>
+      <section class="hd1Wrap">
+        <div class="left">
+          <button type="button" class="btnGnb">출/퇴근</button>
+        </div>
+        <div class="right">
+          <nav class="tnb">
+            <ul>
+              <li><a href="./myinfo.html" class="myinfo">내정보</a></li>
+              <li><a href="./notice.html" class="notice">알림</a></li>
+              <li><a href="./setting.html" class="setting">설정</a></li>
+            </ul>
+          </nav>
+        </div>
+      </section>
+      <nav class="gnb">
+        <ul>
+          <li><a href="./commute.html" class="on">출/퇴근</a></li>
+          <li><a href="./calendar.html">회사일정</a></li>
+          <li><a href="./outside.html">외근관리</a></li>
+          <li><a href="./approval.html">전자결재</a></li>
+          <li><a href="./vacation.html">휴가신청</a></li>
+          <li><a href="./bscard.html">명함관리</a></li>
+          <li><a href="./notice.html">공지사항</a></li>
+          <li><a href="./gallery.html">갤러리</a></li>
+          <li><a href="./document.html">증빙서류</a></li>
+          <li><a href="./education.html">사내교육</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main class="container">
+      <div class="bgB">
+        <nav class="tabWrap">
+          <ul>
+            <li>
+              <a href="#tab-today" class="on">오늘</a>
+            </li>
+            <li>
+              <a href="#tab-last">이번 달</a>
+            </li>
+            <li>
+              <a href="#tab-this">지난 달</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+
+      <!-- 오늘 -->
+      <div id="tab-today" class="tabCont on">
+        <div class="bgB">
+          <section class="graphWrap">
+            <div class="graphArea">
+              <div class="graph">
+                <img src="../assets/images/temp_graph.png">
+              </div>
+            </div>
+            <div class="graphTxt">
+              <p class="date">2022-08-25(목)</p>
+              <p class="time">17:04</p>
+              <p class="msg">아직 <strong>업무시작 전</strong>입니다.<br>오늘도 즐거운 하루 되세요 :)</p>
+              <!-- <p class="msg">스트레칭 한번 어떠세요.<br> 아직도 <strong>업무종료 전</strong>입니다.</p> -->
+              <!-- <p class="msg">오늘 <strong>업무종료</strong> 하셨습니다.<br> 열심히 일한 당신, 멋진 저녁시간 되세요!</p> -->
+            </div>
+          </section>
+          <section class="infoWrap">
+            <div class="titArea">
+              <p class="state ing">업무 중</p>
+              <p class="time">07시간 55분</p>
+            </div>
+            <div class="col3Area">
+              <ul>
+                <li>
+                  <p class="tit">업무 시작</p>
+                  <p class="exp">09:25</p>
+                </li>
+                <li>
+                  <p class="tit">업무 종료</p>
+                  <p class="exp">--:--</p>
+                </li>
+                <li>
+                  <p class="tit">휴게 시작</p>
+                  <p class="exp">12:30~13:30</p>
+                </li>
+              </ul>
+            </div>
+          </section>
+          <section class="btnWrap">
+            <button type="button" id="btnWork" class="btnPrimary">업무 시작하기</button>
+            <!-- <button type="button" class="btnPrimary reverse">업무 종료하기</button> -->
+          </section>
+        </div>
+      </div>
+
+      <!-- 이번 달 -->
+      <div id="tab-last" class="tabCont">
+        <div class="bgW">
+          <section class="tblWrap">
+            <table>
+              <thead>
+                <tr>
+                  <th scope="col">일자</th>
+                  <th scope="col">출근 시간</th>
+                  <th scope="col">퇴근 시간</th>
+                  <th scope="col">업무 시간</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>2022-09-01(목)</td>
+                  <td>09:25</td>
+                  <td>18:35</td>
+                  <td><strong>08시간 10분</strong></td>
+                </tr>
+                <tr>
+                  <td>2022-09-02(금)</td>
+                  <td>09:25</td>
+                  <td>18:35</td>
+                  <td><strong>08시간 10분</strong></td>
+                </tr>
+                <tr>
+                  <td>2022-09-05(월)</td>
+                  <td>09:25</td>
+                  <td>18:35</td>
+                  <td><strong>08시간 10분</strong></td>
+                </tr>
+                <tr>
+                  <td>2022-09-06(화)</td>
+                  <td>09:25</td>
+                  <td>18:35</td>
+                  <td><strong>08시간 10분</strong></td>
+                </tr>
+                <tr>
+                  <td>2022-09-07(수)</td>
+                  <td>09:25</td>
+                  <td>18:35</td>
+                  <td><strong>08시간 10분</strong></td>
+                </tr>
+              </tbody>
+            </table>
+          </section>
+        </div>
+      </div>
+
+      <!-- 지난 달 -->
+      <div id="tab-this" class="tabCont">
+        <div class="bgW">
+          <section class="tblWrap">
+            <table>
+              <thead>
+                <tr>
+                  <th scope="col">일자</th>
+                  <th scope="col">출근 시간</th>
+                  <th scope="col">퇴근 시간</th>
+                  <th scope="col">업무 시간</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>2022-08-01(월)</td>
+                  <td>09:25</td>
+                  <td>18:35</td>
+                  <td><strong>08시간 10분</strong></td>
+                </tr>
+                <tr>
+                  <td>2022-08-02(화)</td>
+                  <td>09:25</td>
+                  <td>18:35</td>
+                  <td><strong>08시간 10분</strong></td>
+                </tr>
+                <tr>
+                  <td>2022-08-03(수)</td>
+                  <td>09:25</td>
+                  <td>18:35</td>
+                  <td><strong>08시간 10분</strong></td>
+                </tr>
+                <tr>
+                  <td>2022-08-04(목)</td>
+                  <td>09:25</td>
+                  <td>18:35</td>
+                  <td><strong>08시간 10분</strong></td>
+                </tr>
+                <tr>
+                  <td>2022-08-05(금)</td>
+                  <td>09:25</td>
+                  <td>18:35</td>
+                  <td><strong>08시간 10분</strong></td>
+                </tr>
+                <tr>
+                  <td>2022-08-08(월)</td>
+                  <td>09:25</td>
+                  <td>18:35</td>
+                  <td><strong>08시간 10분</strong></td>
+                </tr>
+                <tr>
+                  <td>2022-08-09(화)</td>
+                  <td>09:25</td>
+                  <td>18:35</td>
+                  <td><strong>08시간 10분</strong></td>
+                </tr>
+                <tr>
+                  <td>2022-08-10(수)</td>
+                  <td>09:25</td>
+                  <td>18:35</td>
+                  <td><strong>08시간 10분</strong></td>
+                </tr>
+                <tr>
+                  <td>2022-08-11(목)</td>
+                  <td>09:25</td>
+                  <td>18:35</td>
+                  <td><strong>08시간 10분</strong></td>
+                </tr>
+                <tr>
+                  <td>2022-08-12(금)</td>
+                  <td>09:25</td>
+                  <td>18:35</td>
+                  <td><strong>08시간 10분</strong></td>
+                </tr>
+                <tr>
+                  <td>2022-08-15(월)</td>
+                  <td>09:25</td>
+                  <td>18:35</td>
+                  <td><strong>08시간 10분</strong></td>
+                </tr>
+                <tr>
+                  <td>2022-08-16(화)</td>
+                  <td>09:25</td>
+                  <td>18:35</td>
+                  <td><strong>08시간 10분</strong></td>
+                </tr>
+                <tr>
+                  <td>2022-08-17(수)</td>
+                  <td>09:25</td>
+                  <td>18:35</td>
+                  <td><strong>08시간 10분</strong></td>
+                </tr>
+                <tr>
+                  <td>2022-08-18(목)</td>
+                  <td>09:25</td>
+                  <td>18:35</td>
+                  <td><strong>08시간 10분</strong></td>
+                </tr>
+                <tr>
+                  <td>2022-08-19(금)</td>
+                  <td>09:25</td>
+                  <td>18:35</td>
+                  <td><strong>08시간 10분</strong></td>
+                </tr>
+                <tr>
+                  <td>2022-08-22(월)</td>
+                  <td>09:25</td>
+                  <td>18:35</td>
+                  <td><strong>08시간 10분</strong></td>
+                </tr>
+                <tr>
+                  <td>2022-08-23(화)</td>
+                  <td>09:25</td>
+                  <td>18:35</td>
+                  <td><strong>08시간 10분</strong></td>
+                </tr>
+                <tr>
+                  <td>2022-08-24(수)</td>
+                  <td>09:25</td>
+                  <td>18:35</td>
+                  <td><strong>08시간 10분</strong></td>
+                </tr>
+                <tr>
+                  <td>2022-08-25(목)</td>
+                  <td>09:25</td>
+                  <td>18:35</td>
+                  <td><strong>08시간 10분</strong></td>
+                </tr>
+                <tr>
+                  <td>2022-08-26(금)</td>
+                  <td>09:25</td>
+                  <td>18:35</td>
+                  <td><strong>08시간 10분</strong></td>
+                </tr>
+                <tr>
+                  <td>2022-08-29(월)</td>
+                  <td>09:25</td>
+                  <td>18:35</td>
+                  <td><strong>08시간 10분</strong></td>
+                </tr>
+                <tr>
+                  <td>2022-08-30(화)</td>
+                  <td>09:25</td>
+                  <td>18:35</td>
+                  <td><strong>08시간 10분</strong></td>
+                </tr>
+                <tr>
+                  <td>2022-08-31(수)</td>
+                  <td>09:25</td>
+                  <td>18:35</td>
+                  <td><strong>08시간 10분</strong></td>
+                </tr>
+              </tbody>
+            </table>
+          </section>
+        </div>
+      </div>
+
+      <aside>
+        <button type="button" class="btnTop">TOP</button>
+      </aside>
+    </main>
+    <footer>
+      <nav class="fnb">
+        <ul>
+          <li>
+            <a href="./approval.html" class="apprival">전자결재</a>
+          </li>
+          <li>
+            <a href="./vacation.html" class="vacation">휴가신청</a>
+          </li>
+          <li>
+            <a href="./commute.html" class="commute on">출퇴근</a>
+          </li>
+          <li>
+            <a href="./bscard.html" class="bscard">명함관리</a>
+          </li>
+          <li>
+            <a href="./calendar.html" class="calendar">회사일정</a>
+          </li>
+        </ul>
+      </nav>
+    </footer>
+  </div>
+  <script src="../assets/js/common.js"></script>
+</body>
+
+</html>

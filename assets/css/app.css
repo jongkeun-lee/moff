@@ -1,0 +1,1000 @@
+@font-face {
+  font-family: "Pretendard";
+  font-weight: 800;
+  font-display: swap;
+  src: local("Pretendard ExtraBold"), url("../font/Pretendard-ExtraBold.subset.woff2") format("woff2"), url("../font/Pretendard-ExtraBold.subset.woff") format("woff");
+}
+@font-face {
+  font-family: "Pretendard";
+  font-weight: 700;
+  font-display: swap;
+  src: local("Pretendard Bold"), url("../font/Pretendard-Bold.subset.woff2") format("woff2"), url("../font/Pretendard-Bold.subset.woff") format("woff");
+}
+@font-face {
+  font-family: "Pretendard";
+  font-weight: 600;
+  font-display: swap;
+  src: local("Pretendard SemiBold"), url("../font/Pretendard-SemiBold.subset.woff2") format("woff2"), url("../font/Pretendard-SemiBold.subset.woff") format("woff");
+}
+@font-face {
+  font-family: "Pretendard";
+  font-weight: 500;
+  font-display: swap;
+  src: local("Pretendard Medium"), url("../font/Pretendard-Medium.subset.woff2") format("woff2"), url("../font/Pretendard-Medium.subset.woff") format("woff");
+}
+@font-face {
+  font-family: "Pretendard";
+  font-weight: 400;
+  font-display: swap;
+  src: local("Pretendard Regular"), url("../font/Pretendard-Regular.subset.woff2") format("woff2"), url("../font/Pretendard-Regular.subset.woff") format("woff");
+}
+@font-face {
+  font-family: "Pretendard";
+  font-weight: 300;
+  font-display: swap;
+  src: local("Pretendard Light"), url("../font/Pretendard-Light.subset.woff2") format("woff2"), url("../font/Pretendard-Light.subset.woff") format("woff");
+}
+@font-face {
+  font-family: "Pretendard";
+  font-weight: 200;
+  font-display: swap;
+  src: local("Pretendard ExtraLight"), url("../font/Pretendard-ExtraLight.subset.woff2") format("woff2"), url("../font/Pretendard-ExtraLight.subset.woff") format("woff");
+}
+@font-face {
+  font-family: "Pretendard";
+  font-weight: 100;
+  font-display: swap;
+  src: local("Pretendard Thin"), url("../font/Pretendard-Thin.subset.woff2") format("woff2"), url("../font/Pretendard-Thin.subset.woff") format("woff");
+}
+html {
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  font-size: 10px;
+}
+
+body {
+  margin: 0;
+  font-size: 1.4rem;
+  font-weight: 400;
+  color: #333;
+  font-family: "Pretendard", -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", sans-serif;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+section,
+summary,
+address {
+  display: block;
+  box-sizing: border-box;
+}
+
+address {
+  font-style: 300;
+}
+
+a {
+  color: inherit;
+  background-color: transparent;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+a:active,
+a:hover {
+  outline: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+img {
+  border: 0;
+  max-width: 100%;
+  vertical-align: top;
+  box-sizing: border-box;
+}
+
+hr {
+  height: 0;
+  box-sizing: content-box;
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  margin: 0;
+  font-size: inherit;
+  color: inherit;
+  font-family: inherit;
+  box-sizing: border-box;
+}
+
+button {
+  overflow: visible;
+  background: none;
+  border: none;
+  padding: 0;
+}
+
+button,
+select {
+  text-transform: none;
+}
+
+button,
+html input[type=button],
+input[type=reset],
+input[type=submit] {
+  -webkit-appearance: button;
+  cursor: pointer;
+}
+
+button[disabled],
+html input[disabled] {
+  cursor: default;
+}
+
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+input {
+  line-height: normal;
+}
+
+input[type=checkbox],
+input[type=radio] {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+input[type=search] {
+  box-sizing: border-box;
+}
+
+fieldset {
+  padding: 0.35em 0.625em 0.75em;
+  margin: 0 2px;
+  border: 1px solid #c0c0c0;
+}
+
+legend {
+  padding: 0;
+  border: 0;
+}
+
+textarea {
+  overflow: auto;
+}
+
+table {
+  border-spacing: 0;
+  border-collapse: collapse;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+td,
+th {
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul,
+ol {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  box-sizing: border-box;
+}
+
+li {
+  box-sizing: border-box;
+}
+
+dl,
+dt,
+dd {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+p {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+i,
+em,
+b,
+u {
+  font-style: inherit;
+  font-weight: inherit;
+  box-sizing: border-box;
+}
+
+canvas {
+  margin: 0;
+  padding: 0;
+}
+
+header .hd1Wrap {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 18px;
+  height: 50px;
+  border-bottom: #ddd solid 1px;
+}
+header .hd1Wrap .btnGnb {
+  height: 40px;
+  padding-right: 25px;
+  color: #244478;
+  font-size: 1.9rem;
+  font-weight: 700;
+  position: relative;
+}
+header .hd1Wrap .btnGnb::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 15px;
+  left: auto;
+  right: 0;
+  bottom: auto;
+  transform: translateX(0) translateY(0);
+  width: 6px;
+  height: 6px;
+  border-right: 2px solid #999;
+  border-bottom: 2px solid #999;
+  transform: rotate(45deg);
+  transition: all 0.3s ease-out;
+}
+header .hd1Wrap .btnGnb.on::after {
+  transform: rotate(-135deg);
+}
+header .hd1Wrap .tnb ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1 0px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+header .hd1Wrap .tnb ul li a {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0;
+  height: 40px;
+  width: 40px;
+  background-repeat: no-repeat;
+  background-position-x: center;
+  background-position-y: center;
+  background-size: 26px;
+  font-size: 0;
+}
+header .hd1Wrap .tnb ul li a.myinfo {
+  background-image: url(../images/ico_tnb01.png);
+}
+header .hd1Wrap .tnb ul li a.notice {
+  background-image: url(../images/ico_tnb02.png);
+}
+header .hd1Wrap .tnb ul li a.setting {
+  background-image: url(../images/ico_tnb03.png);
+}
+header .gnb {
+  height: 0;
+  overflow: hidden;
+  background-color: #5a9cff;
+  transition: all 0.3s ease-out;
+}
+header .gnb ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: nowrap;
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 18px;
+  height: 100%;
+  overflow-x: auto;
+}
+header .gnb ul li a {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0;
+  height: 40px;
+  white-space: nowrap;
+  color: #fff;
+}
+header .gnb ul li a.on {
+  font-weight: 700;
+}
+header .gnb.on {
+  height: 50px;
+}
+
+main {
+  padding-bottom: 35px;
+  position: relative;
+  min-height: calc(100vh - 140px);
+}
+main .bgW {
+  padding: 25px 18px;
+  background-color: #fff;
+}
+main .bgB {
+  padding: 25px 18px;
+  background-color: #f7fafe;
+}
+main .tabWrap > ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+main .tabWrap > ul > li a {
+  height: 30px;
+  min-width: 70px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0;
+  background-color: #fff;
+  border: #aaa solid 1px;
+  border-radius: 5px;
+  color: #aaa;
+  font-weight: 600;
+}
+main .tabWrap > ul > li a.on {
+  border-color: #5a9cff;
+  color: #5a9cff;
+}
+main .scrolltabWrap {
+  margin-right: -18px;
+}
+main .scrolltabWrap > ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: nowrap;
+  gap: 5px;
+  overflow-x: auto;
+}
+main .scrolltabWrap > ul > li a {
+  height: 30px;
+  min-width: 100px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0;
+  background-color: #fff;
+  border-bottom: #fff solid 2px;
+  color: #aaa;
+  font-weight: 600;
+}
+main .scrolltabWrap > ul > li a.on {
+  border-color: #5a9cff;
+  color: #5a9cff;
+}
+main .tabCont {
+  display: none;
+}
+main .tabCont.on {
+  display: block;
+}
+main .tabCont .bgB, main .tabCont .bgW {
+  padding-top: 0;
+}
+main .titWrap {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0;
+}
+main .period {
+  color: #6797e6;
+  font-weight: 600;
+  font-size: 1.3rem;
+}
+main .checkWrap > ul {
+  border: #7b92d9 solid 1px;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2px;
+  padding: 2px 2px;
+}
+main .checkWrap > ul label {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0;
+  height: 35px;
+  min-width: 65px;
+  position: relative;
+}
+main .checkWrap > ul label input[type=checkbox] {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+}
+main .checkWrap > ul label b {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  border-radius: 5px;
+  color: #7b92d9;
+  font-weight: 600;
+  font-size: 1.5rem;
+}
+main .checkWrap > ul label input[type=checkbox]:checked + b {
+  background-color: #7b92d9;
+  color: #fff;
+}
+main .searchWrap {
+  margin-top: 15px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0;
+  height: 44px;
+  background-color: #f8f8f9;
+  border: #ddd solid 1px;
+  border-radius: 44px;
+  color: #aaa;
+}
+main .searchWrap input[type=search] {
+  flex: 1;
+  background-color: transparent;
+  border-color: transparent;
+  height: 100%;
+  border-radius: 44px 0 0 44px;
+  padding-left: 20px;
+}
+main .searchWrap button {
+  width: 50px;
+  height: 40px;
+  border-radius: 40px;
+  background-repeat: no-repeat;
+  background-position-x: center;
+  background-position-y: center;
+  background-size: 20px;
+  background-image: url(../images/ico_search.png);
+  font-size: 0;
+}
+main .graphWrap {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: #ddd 0 5px 5px 0px;
+  padding: 15px 20px;
+  position: relative;
+}
+main .graphWrap .graphArea {
+  text-align: center;
+}
+main .graphWrap .graphTxt {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  right: auto;
+  bottom: auto;
+  transform: translateX(-50%) translateY(-50%);
+  text-align: center;
+}
+main .graphWrap .graphTxt .date {
+  margin-top: 20px;
+  color: #687497;
+  font-size: 1.3rem;
+}
+main .graphWrap .graphTxt .time {
+  margin-top: 10px;
+  color: #244478;
+  font-size: 3.5rem;
+  font-weight: 600;
+}
+main .graphWrap .graphTxt .msg {
+  margin-top: 15px;
+  color: #687497;
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+main .graphWrap .graphTxt .msg strong {
+  color: #f4b0e3;
+}
+main .infoWrap {
+  margin-top: 25px;
+  background-color: #e7f0fe;
+  border-radius: 10px;
+  padding: 30px 20px;
+}
+main .infoWrap .titArea {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0;
+  font-size: 1.5rem;
+}
+main .infoWrap .titArea .state {
+  padding-left: 20px;
+  font-weight: 500;
+  color: #002968;
+  position: relative;
+}
+main .infoWrap .titArea .state::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: auto;
+  bottom: auto;
+  transform: translateX(0) translateY(-50%);
+  width: 10px;
+  height: 10px;
+  border-radius: 10px;
+  background-color: #5a9cff;
+}
+main .infoWrap .titArea .state.ing::before, main .infoWrap .titArea .state.remain::before {
+  background-color: #5a9cff;
+}
+main .infoWrap .titArea .state.end::before, main .infoWrap .titArea .state.used::before {
+  background-color: #f4b0e3;
+}
+main .infoWrap .titArea .time {
+  font-weight: 600;
+}
+main .infoWrap .titArea + .titArea {
+  margin-top: 10px;
+}
+main .infoWrap .col3Area > ul {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: stretch;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+main .infoWrap .col3Area > ul > * {
+  width: calc( ( 100% - (10px*(3 - 1)) ) / 3 );
+}
+main .infoWrap .col3Area > ul > li {
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 15px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  font-size: 1.5rem;
+}
+main .infoWrap .col3Area > ul > li .tit {
+  color: #002968;
+  font-weight: 500;
+}
+main .infoWrap .col3Area > ul > li .exp {
+  font-weight: 600;
+}
+main .tblWrap {
+  margin: 0 -18px;
+  background-color: #fff;
+}
+main .tblWrap table {
+  border-top: #6797e6 solid 2px;
+}
+main .tblWrap th, main .tblWrap td {
+  padding: 16px 0;
+  text-align: center;
+}
+main .tblWrap th {
+  color: #244478;
+  font-weight: 500;
+  background-color: #f9f9f9;
+}
+main .tblWrap td {
+  border-top: #ddd solid 1px;
+}
+main .tblWrap td strong {
+  color: #5a9cff;
+}
+main .tblWrap td .ing {
+  color: #2dc194;
+}
+main .tblWrap td .end {
+  color: #999;
+}
+main .tblWrap td .use {
+  color: #5a9cff;
+}
+main .bslistWrap {
+  margin: 0 -18px;
+  margin-top: 15px;
+}
+main .bslistWrap > ul > li {
+  padding: 30px 18px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+main .bslistWrap > ul > li:not(:first-of-type) {
+  border-top: #ddd solid 1px;
+}
+main .bslistWrap > ul > li .thumb {
+  width: 110px;
+  height: 110px;
+  flex-shrink: 0;
+  background-color: #dde5f3;
+  border: #dde5f3 solid 3px;
+  border-radius: 50%;
+  font-size: 4rem;
+  font-weight: 500;
+  color: #244478;
+}
+main .bslistWrap > ul > li .thumb i {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0;
+  width: 100%;
+  height: 100%;
+  border: #fff solid 3px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+main .bslistWrap > ul > li .thumb img {
+  height: 100%;
+  max-width: none;
+  margin: auto;
+  display: block;
+}
+main .bslistWrap > ul > li .thumb.gr {
+  border-color: green;
+}
+main .bslistWrap > ul > li .thumb.pu {
+  border-color: purple;
+}
+main .bslistWrap > ul > li .thumb.bl {
+  border-color: blue;
+}
+main .bslistWrap > ul > li .thumb.re {
+  border-color: red;
+}
+main .bslistWrap > ul > li .thumb.or {
+  border-color: orange;
+}
+main .bslistWrap > ul > li .thumb.ye {
+  border-color: yellow;
+}
+main .bslistWrap > ul > li .thumb.in {
+  border-color: indigo;
+}
+main .bslistWrap > ul > li .txtArea {
+  flex: 1;
+}
+main .bslistWrap > ul > li .txtArea em {
+  color: #5a9cff;
+}
+main .bslistWrap > ul > li .txtArea .name {
+  color: #222;
+  font-size: 2.2rem;
+  font-weight: 700;
+}
+main .bslistWrap > ul > li .txtArea .group {
+  margin-top: 5px;
+  color: #666;
+  font-size: 1.3rem;
+  font-weight: 500;
+}
+main .bslistWrap > ul > li .txtArea .company {
+  color: #637cc9;
+}
+main .bslistWrap > ul > li .txtArea .tel {
+  margin-top: 15px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  color: #002968;
+  font-size: 1.7rem;
+}
+main .bslistWrap > ul > li .txtArea .tel .btnTel {
+  display: block;
+  width: 25px;
+  height: 25px;
+  background-color: #6797e6;
+  border-radius: 50%;
+  background-repeat: no-repeat;
+  background-position-x: center;
+  background-position-y: center;
+  background-size: 50%;
+  background-image: url(../images/ico_phone.png);
+}
+main .bslistWrap > ul > li .txtArea .email {
+  margin-top: 15px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  color: #002968;
+  font-size: 1.7rem;
+}
+main .bslistWrap > ul > li .txtArea .email .btnEmail {
+  display: block;
+  width: 25px;
+  height: 25px;
+  background-color: #6797e6;
+  border-radius: 50%;
+  background-repeat: no-repeat;
+  background-position-x: center;
+  background-position-y: center;
+  background-size: 50%;
+  background-image: url(../images/ico_email.png);
+}
+main .bslistWrap > ul > li .txtArea .tel + .email {
+  margin-top: 5px;
+}
+main .btnWrap {
+  position: absolute;
+  top: auto;
+  left: 0;
+  right: auto;
+  bottom: 35px;
+  transform: translateX(0) translateY(0);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0;
+  width: 100%;
+}
+main aside {
+  position: fixed;
+  right: 18px;
+  bottom: 125px;
+}
+main .btnPrimary {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0;
+  width: 60%;
+  height: 45px;
+  max-width: 235px;
+  border-radius: 45px;
+  background: linear-gradient(90deg, #5a9cff 0%, #f4b0e3 100%);
+  color: #fff;
+  font-weight: 600;
+  font-size: 1.6rem;
+}
+main .btnPrimary.reverse {
+  background: linear-gradient(90deg, #f4b0e3 0%, #5a9cff 100%);
+}
+main .btnTop {
+  width: 45px;
+  height: 45px;
+  background-color: #fff;
+  border: #aaa solid 1px;
+  border-radius: 50%;
+  font-size: 0;
+}
+main .btnTop::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  right: auto;
+  bottom: auto;
+  transform: translateX(0) translateY(0);
+  width: 6px;
+  height: 6px;
+  border-right: 2px solid #999;
+  border-bottom: 2px solid #999;
+  transform: translate(-50%, -50%) rotate(-135deg);
+  transition: all 0.3s ease-out;
+}
+main .btnSort {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0;
+  height: 40px;
+  padding-right: 35px;
+  background-repeat: no-repeat;
+  background-position-x: 100%;
+  background-position-y: center;
+  background-size: 25px;
+  background-image: url(../images/ico_filter.png);
+  color: #333;
+  font-size: 1.3rem;
+}
+main .btnSmall {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0;
+  min-width: 70px;
+  height: 30px;
+  font-size: 1.3rem;
+  font-weight: 600;
+  border-radius: 5px;
+}
+main .btnSmall.t1 {
+  background-color: #5a9cff;
+  color: #fff;
+}
+main .btnSmall.t2 {
+  background-color: #fff;
+  border: #f5563c solid 1px;
+  color: #f5563c;
+}
+main .noData {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  min-height: 50vh;
+  color: #959bad;
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+main .noData::before {
+  content: "!";
+  display: block;
+  border: #959bad solid 2px;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  text-align: center;
+  line-height: 20px;
+}
+
+footer {
+  border-top: #ddd solid 1px;
+  padding: 15px 0;
+}
+footer .fnb > ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 18px;
+}
+footer .fnb > ul > li a {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0;
+  height: 50px;
+  width: 50px;
+  font-size: 1.4rem;
+  color: #222;
+  font-weight: 500;
+  padding-top: 35px;
+  background-repeat: no-repeat;
+  background-position-x: center;
+  background-position-y: 0;
+  background-size: 90%;
+  opacity: 0.6;
+  filter: grayscale(100%);
+}
+footer .fnb > ul > li a.apprival {
+  background-image: url(../images/ico_fnb01.png);
+}
+footer .fnb > ul > li a.vacation {
+  background-image: url(../images/ico_fnb02.png);
+}
+footer .fnb > ul > li a.commute {
+  background-image: url(../images/ico_fnb03.png);
+}
+footer .fnb > ul > li a.bscard {
+  background-image: url(../images/ico_fnb04.png);
+}
+footer .fnb > ul > li a.calendar {
+  background-image: url(../images/ico_fnb05.png);
+}
+footer .fnb > ul > li a.on {
+  opacity: 1;
+  filter: grayscale(0);
+}
